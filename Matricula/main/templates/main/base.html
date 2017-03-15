@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <nav>
+    <a href="{% url 'main:root' %}">Root</a>
+    <a href="{% url 'main:about' %}">About</a>
+    <a href="{% url 'main:login'%}">login</a>
+    <a href="{% url 'main:logout'%}">logout</a>
+    <a href="{% url 'main:register'%}">Register</a>
+    <a href="{% url 'main:password_reset'%}">Reset</a>
+  </nav>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
